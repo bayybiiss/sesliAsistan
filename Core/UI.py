@@ -12,6 +12,7 @@ class UI(Tk):
         self.config(padx=50, pady=50)
 
 
+
     def buton_ekle_ui(self, command):
         ##Başlık
         title_lbl = Label(text="Sesli Asistan")
