@@ -1,0 +1,16 @@
+Asistan Sınıfındaki Fonksiyon İsimleri
+
+start_ui --> start_ui
+
+print_devices --> listele_cihazlar
+
+detect_speach --> sesi algıla
+
+
+
+
+UI Sınıfındaki Fonksiyon İsimleri
+
+setup_ui_contents --> buton_ekle_ui
+
+14:35 de kaldım :)))
