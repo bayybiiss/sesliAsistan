@@ -1,9 +1,7 @@
-print("sesli asitabnnnnnn")
-print("sesli asitabnnnnnn")
-print("sesli asitabnnnnnn")
-print("sesli asitabnnnnnn")
-print("sesli asitabnnnnnn")
-print("sesli asitabnnnnnn")
-print("sesli asitabnnnnnn")
+from Core.Asistan import Asistan
 
-print("deneme")
+asistan = Asistan()
+
+asistan.listele_cihazlar()
+
+asistan.start_ui()
