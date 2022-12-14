@@ -29,4 +29,6 @@ class Asistan(sr.Recognizer):
     def sesi_algila(self):
         pass
 
+    print("ol artık!")
+
 

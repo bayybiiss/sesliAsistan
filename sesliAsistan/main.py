@@ -6,4 +6,3 @@ asistan.listele_cihazlar()
 
 asistan.start_ui()
 
-print("hellöö")
