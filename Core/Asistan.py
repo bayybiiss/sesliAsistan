@@ -26,11 +26,18 @@ class Asistan(sr.Recognizer):
         print(table)
 
 
+    def update_btn_lbl(self, is_listening):
+        new_text = "Dinliyorum..." if is_listening else "Konuşmak için bas"
+        self.speak_button.config(text=new_text)
+        self.speak_button.update()
+
+
     @property
-    def sesi_algila(self):
+    def _sesi_algila(self):
         try:
             with sr.Microphone() as source:
-                print("Say something!")
+                self.update_btn_lbl(True)
+
                 audio = self.listen(source)
 
                 try:
@@ -40,14 +47,16 @@ class Asistan(sr.Recognizer):
                 except sr.RequestError as e:
                     print("Could not request results fromm Google Speech Recognition service; {0}".format(e))
                 else:
-                    print("Google Speech Recognition thinks you said" + new_input),
                     return new_input
+
         except:
             print("Cannot access to a mic.")
+        finally:
+            self.update_btn_lbl(False)
 
 
     def awake_asistan(self):
-        input = self.sesi_algila()
+        input = self._sesi_algila()
 
         if input:
             print(input)
