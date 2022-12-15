@@ -21,9 +21,9 @@ def make_configuration():
         lang = config_data.get("lang")
         tld = config_data.get("tld")
 
-        asistan = Asistan(lang=lang, tld=tld)
-        asistan.print_devices()
-        asistan.start_ui()
+        assistance = Asistan()
+        assistance.listele_cihazlar()
+        assistance.start_ui()
 
 
 make_configuration()

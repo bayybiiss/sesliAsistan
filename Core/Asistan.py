@@ -1,5 +1,6 @@
 import speech_recognition as sr
 from Core.UI import UI
+import tkinter as tk
 from Core.SpeechGenerator import SpeechGenerator
 
 
@@ -7,9 +8,8 @@ class Asistan(sr.Recognizer):
     def __int__(self, **kw):
         super().__init__()
 
-        ## UI
-        self.window = UI()
-        self.speak_button = self.window.buton_ekle_ui(command=self.awake_asistan)
+        """self.window = UI()
+        self.speak_button = self.window.buton_ekle_ui(command=self.awake_asistan)"""
 
         ## Speech
         lang = kw.get("lang") if kw.get("lang") else "tr"
@@ -17,6 +17,9 @@ class Asistan(sr.Recognizer):
         self.generator = SpeechGenerator(lang=lang, tld=tld)
 
     def start_ui(self):
+        ## U
+        self.window = UI()
+        self.speak_button = self.window.buton_ekle_ui(command=self.awake_asistan)
         self.window.mainloop()
 
     """
